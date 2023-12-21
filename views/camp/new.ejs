@@ -1,0 +1,56 @@
+<%layout('layout/boilerplate')%>        
+<div class="row">
+        <h3 class="text-center">New Campground</h3>
+        <div class="col-md-6 offset-md-3" >
+            <form action='/campground' method="POST" class="validate-form" novalidate enctype="multipart/form-data">
+                <div class="mb-2">
+                    <label for="title" class="form-label">Title</label>
+                    <input class="form-control" type="text" id="title" name="campground[title]" placeholder="Camp Name" required > 
+                    <div class="invalid-feedback">
+                        Please provide a camp title.
+                      </div>
+                </div>
+                <div class="mb-2">
+                    <label for="Location" class="form-label">Location</label>
+                    <input class="form-control" type="text" id="Location" name="campground[Location]" placeholder="Camp Location" required>
+                    <div class="invalid-feedback">
+                        Please provide Location.
+                      </div>
+                </div>
+                <div class="mb-2">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" type="text" id="description" name="campground[description]" placeholder="Camp description" required></textarea>
+                    <div class="invalid-feedback">
+                        Please provide description.
+                      </div>
+                </div>
+                <div class="mb-2">
+                    <label for="price" class="form-label">Price Details</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="price-label">&#8377;</span>
+                        <input name="campground[price]" type="number" id="price" class="form-control" aria-label="price" aria-describedby="price-label" placeholder="0.00" required>
+                        <div class="invalid-feedback">
+                            Please provide price.
+                          </div>
+                      </div>
+                      
+                </div>
+                
+                <div class="mb-2">
+                    <label for="image" class="form-label">Add Image</label>
+                    <input class="form-control" type="file" id="image" name="campground[image]" placeholder="image URL" multiple>
+                    <div class="invalid-feedback">
+                        Please provide image details.
+                      </div>
+                </div>                
+                <div class="d-grid">
+                    <button class="btn btn-success">SUBMIT</button>
+                </div>
+            </div>
+            </form>
+
+        
+</div>
+
+
+

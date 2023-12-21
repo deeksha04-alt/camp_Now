@@ -1,0 +1,26 @@
+<%if(message.length)
+{%>
+    <div class="row">
+        <div class="col-3">
+            <div id="revmsg" class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong><%=message%></strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+<%}
+%>
+<%if(error.length) 
+{%>
+<div class="row">
+    <div class="col-3">
+        <div id="revmsg" class="alert alert-danger d-flex alert-dismissible fade show" role="alert">
+            <strong><%=error%></strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+
+<%}
+%>

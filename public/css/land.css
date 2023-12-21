@@ -1,0 +1,81 @@
+html
+{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif';
+}
+
+body{
+    overflow-x: hidden;
+    background-image: radial-gradient(at 60% bottom, rgb(241, 241, 192),rgb(151, 210, 245));
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.nav-link {
+    padding: 0.25rem 0;
+    font-weight: 700;
+    margin-left: 1rem;
+    border-bottom: 0.25rem solid transparent;
+}
+
+.nav-link:hover{
+    border-bottom-color:rgba(255,255,255,0.5);
+}
+
+.nav-link.active {
+    color:white;
+    border-bottom-color:white;
+
+}
+
+.btn-secondary, .btn-secondary:hover{
+    color: #333;
+    text-shadow: none;
+}
+
+
+#camp
+{
+    margin-top: 40px;
+    text-align: center;
+    color: #265073;
+    font-weight: 700;
+}
+.parallax
+{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.parallax h2{
+    font-size: 4rem;
+}
+.parallax img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.explore
+{    
+    background: #265073;
+    position: relative;
+    
+    text-align: center;
+    padding: 100px;
+}
+.explore h3{
+    font-size: 3em;
+    font-weight: 600;
+    color: #f1bd14;
+}
+

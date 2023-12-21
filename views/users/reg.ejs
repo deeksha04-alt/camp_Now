@@ -1,0 +1,39 @@
+<%layout('layout/boilerplate')%>       
+<div class="row">
+    <h5 class="text-center">New Registration</h5>
+
+    <div class="col-md-6 offset-md-3">
+        <form action="/user/register" method="post" novalidate class="validate-form">
+            <div class="mb-3">
+                <label for="email" class="form-label">Email: </label>
+                <input class="form-control" type="email" id="email" name="mail" required>
+                <div class="invalid-feedback">
+                    email id can't be blank
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="username" class="form-label">username: </label>
+                <input  class="form-control" type="text" id="username" name="username" required>
+                <div class="invalid-feedback">
+                    Username can't be blank
+                </div>
+            </div>
+            <div class="mb-3">
+                
+            <label for="password" class="form-label">password: </label>
+            <input class="form-control" type="password" id="password" name="password" required>
+            <div class="invalid-feedback">
+                Please provide password.
+            </div>
+        </div>
+            
+        <div class="d-grid">
+            <button class="btn btn-success">sign up</button>
+        </div>
+        
+        </form>
+            
+    </div>
+    
+    
+</div>

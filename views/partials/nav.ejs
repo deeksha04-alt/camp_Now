@@ -1,0 +1,29 @@
+<nav class="navbar sticky-top navbar-expand-lg" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/campground">YalmCamp</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-link " href="/">Home</a>
+            <a class="nav-link " href="/campground">Campground</a>
+            <a class="nav-link" href="/campground/new">New Campground</a>
+        </div>
+        <div class="navbar-nav ml-auto">
+          <%if(!curUser)
+          {%>
+            <a href="/user/login" class="nav-link">Login</a>
+            <a href="/user/register" class="nav-link">Register</a>
+          <%}
+          else
+          {%>
+            <a href="/user/logout" class="nav-link">Logout</a>
+          <%}%>
+      
+          
+        </div>
+        
+      </div>
+    </div>
+</nav>

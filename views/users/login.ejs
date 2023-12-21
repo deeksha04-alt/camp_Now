@@ -1,0 +1,36 @@
+<%layout('layout/boilerplate')%>       
+<div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="row">
+        <div class="col mt-2 mb-2">
+            <div class="card-shadow">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Login!!</h5>
+                    <form action="/user/login" method="POST" class="validate-form" novalidate>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">username: </label>
+                            <input  class="form-control" type="text" id="username" name="username" required>
+                            <div class="invalid-feedback">
+                                Username can't be blank
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            
+                        <label for="password" class="form-label">password: </label>
+                        <input class="form-control" type="password" id="password" name="password" required>
+                        <div class="invalid-feedback">
+                            Please provide password.
+                        </div>
+                    </div>
+                        
+                    <div class="d-grid">
+                        <button class="btn btn-success">Login</button>
+                    </div>
+                    
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</div>
