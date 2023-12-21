@@ -5,7 +5,8 @@ if(process.env.NODE_ENV!="production")
 
 const mongoose=require('mongoose');
 const express=require('express');
-const session=require('express-session');
+const session = require('express-session');
+const MemoryStore = require('memorystore')(session)
 const flash=require('connect-flash');
 const path=require('path');
 const app=express();
@@ -54,7 +55,9 @@ store.on("error", function (e) {
     console.log("SESSION STORE ERROR", e)
 })
 const sessionConfig = {
-    store,
+    store: new MemoryStore({
+        checkPeriod: 86400000 // prune expired entries every 24h
+      }),
     name:"session" ,     
     secret: process.env.SECRET,
     resave: false,
