@@ -6,7 +6,6 @@ if(process.env.NODE_ENV!="production")
 const mongoose=require('mongoose');
 const express=require('express');
 const session = require('express-session');
-const MemoryStore = require('memorystore')(session)
 const flash=require('connect-flash');
 const path=require('path');
 const app=express();
@@ -55,9 +54,7 @@ store.on("error", function (e) {
     console.log("SESSION STORE ERROR", e)
 })
 const sessionConfig = {
-    store: new MemoryStore({
-        checkPeriod: 86400000 // prune expired entries every 24h
-      }),
+    store: store,
     name:"session" ,     
     secret: process.env.SECRET,
     resave: false,
@@ -126,5 +123,5 @@ app.use((err,req,res,next)=>        //error handling middleware
 
 const port=process.env.PORT||3100;
 app.listen(port,()=>{
-    console.log("Listening on port 3100");
+    console.log(`Listening on ${port}`);
 })
